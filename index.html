@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/3928f97def.js" crossorigin="anonymous"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Smooth scroll function
+            function scrollToSection(id) {
+                const section = document.querySelector(id);
+                window.scrollTo({
+                    top: section.offsetTop,
+                    behavior: "smooth"
+                });
+            }
+
+            // Smooth scroll when clicking on navigation links
+            const navLinks = document.querySelectorAll("header nav a");
+            navLinks.forEach(link => {
+                link.addEventListener("click", function(event) {
+                    event.preventDefault();
+                    const targetId = this.getAttribute("href");
+                    scrollToSection(targetId);
+                });
+            });
+        });
+    </script>
+
+</head>
+<body>
+    <header>
+        <h1 class="logo"><img src="logo.png" alt="Logo"></h1>
+        <nav>
+            <a href="#" class="active" onclick="scrollToTop()">Home</a>
+            <a href="#Content">Content</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <section class="Home">
+        <div class="text-box">
+            <h1>CASLD1 2024</h1>
+            <h1>Conditions with Associated Speech-Language Disorders in Children</h1>
+            <p>An overview of different conditions with associated
+                speech-language
+                disorders. Focuses on conditions that affect early development such as attention deficit and hyperactivity disorder (ADHD), 
+                autism, down syndrome, cleft lip and palate, cerebral palsy, etc.
+                Furthermore, it discusses multidisciplinary treatment and rehabilitation pertaining to the discussed conditions.</p>
+            <span class="btn-box">
+                <button type="button" class="btn" onclick="scrollToContent()">Content</button>
+            </span>
+        </div>
+        <span class="background-span">
+            <span class="overlay"></span>
+            <img src="./background.png" alt="">
+        </span>
+        <img src="earth.png" class="img" alt="">
+    </section>
+
+
+<!-- ----------CONTENT------------ -->
+<!-- First Content Section -->
+<section id="Content" class="Content-section">
+    <div class="container">
+        <h1 class="sub-title">Content</h1>
+        <div class="Content-content">
+            <div class="Content-item">
+                <h2><b>DEVELOPMENTAL DISABILITIES & ATTENTION DEFICIT/HYPERACTIVITY DISORDER</b></h2>
+                <p>
+                    Developmental Disabilities (DD) encompass a range of conditions leading to delays in physical, 
+                    cognitive, communicative, social, and emotional development, impacting individuals across various age groups.
+                    <br>
+                    <br>
+                    Attention Deficit/Hyperactivity Disorder (ADHD) is a neurodevelopmental disorder 
+                    characterized by symptoms of inattention, hyperactivity, and impulsivity.
+                </p>
+                <a href="contents/UNIT 2 Developmental Disabilities and ADHD (1).pdf" download class="btn btn2">Download PDF</a>
+            </div>
+            <div class="Content-item">
+                <h2><b>AUTISM SPECTRUM DISORDER (ASD) & DOWN SYNDROME</b></h2>
+                <p>
+                    ASD is condition related to brain development, impacting how individuals perceive and interact with others.
+                    <br>
+                    <br>
+                    Down syndrome (trisomy 21), is a genetic disorder caused when abnormal 
+                    cell division results in an extra full or partial copy of chromosome 21.
+                </p>
+                <a href="contents/UNIT 3 Autism & Down Syndrome.pdf" download class="btn btn2">Download PDF</a>
+            </div>
+            <div class="Content-item">
+                <h2><b>SENSORY INTEGRATION DISORDERS AND ITS CONCEPTS</b></h2>
+                <p>
+                    Sensory Integration Disorder (SID), also known as Sensory Processing Disorder (SPD), 
+                    is a neurological disorder that occurs when the brain encounters difficulties in 
+                    receiving and responding to information transmitted through the body’s sensory systems.
+                </p>
+                <a href="contents/UNIT 4 SENSORY INTEGRATION DISORDERS.pdf" download class="btn2">Download PDF</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Second Content Section -->
+<section id="Content" class="Content-section">
+    <div class="container">
+        <div class="Content-content">
+            <div class="Content-item">
+                <h2><b>PREMATURE INFANTS AND MULTIPLE DEVELOPMENTAL DISABILITIES</b></h2>
+                <p>
+                    Premature infants are infants born alive before the 37 weeks of pregnancy is complete.
+                </p>
+                <a href="contents/UNIT 5 Premature Infants and Multiple Developmental Disabilities.pdf" download class="btn2">Download PDF</a>
+            </div>
+            <div class="Content-item">
+                <h2><b>INTELLECTUAL DISORDERS</b></h2>
+                <p>
+                    Characterized by onset in the developmental period (before the age of 22 years), 
+                    significant limitations in
+                    adaptive behavior, and significant limitations in intellectual functioning such 
+                    that the individual fails to meet standards of personal independence and social responsibility in one or more aspects of life
+                </p>
+                <a href="contents/UNIT 6 Intellectual Disorder.pdf" download class="btn2">Download PDF</a>
+            </div>
+            <div class="Content-item">
+                <h2><b>CLEFT AND CRANIOFACIAL ANOMALIES</b></h2>
+                <p>
+                    A cleft is an abnormal opening or fissure in an anatomical structure that is normally closed. 
+                    <br>
+                    <br>
+                    Craniofacial conditions refer to a group of disorders or anomalies affecting the head and face,
+                    including the skull, facial bones, and soft tissues, which may lead to functional and aesthetic challenges.
+                </p>
+                <a href="contents/UNIT 7 CLEFT AND CRANIOFACIAL ANOMALIES.pdf" download class="btn2">Download PDF</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Third Content Section -->
+<section id="Content" class="Content-section">
+    <div class="container">
+        <div class="Content-content">
+            <div class="Content-item">
+                <h2><b>DENTAL CONDITIONS AND DENTAL HYGIENE</b></h2>
+                <p>
+                    Dental conditions, commonly called "dental problems," encompass various issues that compromise oral health and hygiene.
+                    <br>
+                    <br>
+                    Dental hygiene is the practice of maintaining clean teeth, gums, and mouth to prevent dental problems
+                    such as tooth decay, gum disease, and bad breath.
+                </p>
+                <a href="contents/UNIT 8 Dental Hygiene & Conditions.pdf" download class="btn btn2">Download PDF</a>
+            </div>
+            <div class="Content-item">
+                <h2><b>MOOD DISORDERS</b></h2>
+                <p>
+                    Mood Disorders as a mental health class “to broadly describe all types of depression and bipolar disorders.
+                </p>
+                <a href="contents/UNIT 9 Mood Disorder.pdf" download class="btn btn2">Download PDF</a>
+            </div>
+            <div class="Content-item">
+                <h2><b>SEIZURE DISORDERS</b></h2>
+                <p>
+                    Seizure, characterized by a temporary surge of electrical activity in the brain causing 
+                    uncontrollable firing of signals among brain cells, can induce changes in behavior, movements, 
+                    feelings, and consciousness levels.
+                </p>
+                <a href="contents/UNIT 10 Seizure Disorder.pdf" download class="btn2">Download PDF</a>
+            </div>
+            <div class="Content-item">
+                <h2><b>CEREBRAL PALSY</b></h2>
+                <p>
+                    A nonprogressive, permanent disorder that affects muscle movement, postural/tone development, and motor skills.
+                </p>
+                <a href="contents/Unit 11 Cerebral Palsy.pdf" download class="btn2">Download PDF</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ----------CONTACT------------ -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="contact-left">
+                    <h1 class="sub-title">Connect with us</h1>
+
+                    <p style="font-size: 50px;">
+                        <a href="CONTACT-SHEET.pdf" download>
+                            <i class="fa-regular fa-file"></i> SLP 2 CASLD1 2023-2024
+                        </a>
+                    </p>
+
+                    <p style="font-size: 50px;"><i class="fa-solid fa-envelope"></i> spur.cdu@gmail.com</p>
+        
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/cducrs.spur"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/cducrs.spur?igsh=YnNxZDV4OWFuMXV1"><i class="fa-brands fa-square-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    function scrollToContent() {
+        var contentSection = document.getElementById("Content");
+        contentSection.scrollIntoView({ behavior: 'smooth' });
+    }
+    function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function scrollToContent() {
+            var contentSection = document.getElementById('Content');
+            contentSection.scrollIntoView({ behavior: 'smooth' });
+        }
+</script>
+
+</body>
+</html>
