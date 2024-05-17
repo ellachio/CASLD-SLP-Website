@@ -226,7 +226,7 @@ header nav a:hover::before{
     color: var(--text-light-color);
     border-radius: 10px;
     transition: background 0.5s, transform 0.5s, color 0.5s;
-    height: 100%; /* Ensures items have equal height */
+    height: 100%; 
 }
 
 .Content-item h2 {
@@ -245,8 +245,8 @@ header nav a:hover::before{
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: 10px; /* Space between the buttons */
-    margin-top: 20px; /* Add some margin to the top */
+    gap: 10px; 
+    margin-top: 20px; 
 }
 
 .link-container a {
@@ -258,8 +258,13 @@ header nav a:hover::before{
 }
 
 .link-container a .fa-file-video {
-    font-size: 35px; /* Increase the size of the icon */
-    color: var(--text-light-color); /* Ensure icon color matches text */
+    font-size: 35px; 
+    color: var(--text-light-color); 
+}
+
+
+.link-container a:hover .fa-file-video {
+    color: #1e3a8a; 
 }
 
 .Content-item:hover {
@@ -306,7 +311,6 @@ header nav a:hover::before{
         font-size: 28px; 
     }
 }
-
 
 
 /* --------------- CONTACT ----------------- */
