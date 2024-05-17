@@ -46,8 +46,22 @@ header h1.logo {
     padding: 0; 
 }
 header h1.logo img {
-    max-height: 100px; 
+    max-height: 70px; 
 }
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--background-color); /* Adjust based on your design */
+    z-index: 1000;
+}
+
+header.hide-logo h1.logo img {
+    display: none;
+}
+
+
 header nav a{
     color: var(--text-light-color);
     margin-left: 70px;
@@ -227,13 +241,25 @@ header nav a:hover::before{
     flex-grow: 1; 
 }
 
-.Content-item a {
+.link-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px; /* Space between the buttons */
+    margin-top: 20px; /* Add some margin to the top */
+}
+
+.link-container a {
     text-decoration: none;
     color: var(--text-light-color);
     font-size: 12px;
     display: inline-block;
-    align-self: flex-start; 
-    margin-top: 20px; 
+    margin-top: 0; 
+}
+
+.link-container a .fa-file-video {
+    font-size: 35px; /* Increase the size of the icon */
+    color: var(--text-light-color); /* Ensure icon color matches text */
 }
 
 .Content-item:hover {
@@ -265,7 +291,7 @@ header nav a:hover::before{
 
 /* Sub-title style */
 .sub-title {
-    font-size: 36px; 
+    font-size: 50px; 
     font-weight: bold; 
     color: var(--secondary-color); 
     text-align: center; 
@@ -280,6 +306,8 @@ header nav a:hover::before{
         font-size: 28px; 
     }
 }
+
+
 
 /* --------------- CONTACT ----------------- */
 .contact-left {
