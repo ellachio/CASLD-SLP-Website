@@ -16,7 +16,7 @@
     --text-dark-color: #5b5b5b;
 }
 
-.Home{
+.Home {
     min-height: 100vh;
     background-color: var(--background-color);
     position: relative;
@@ -25,8 +25,13 @@
     align-items: center;
     padding: 0 100px;
     overflow: hidden;
+    background-image: url('logo.png'); 
+    background-repeat: no-repeat; 
+    background-size: 100px; 
+    background-position: 100px 10px; 
 }
-header{
+
+header {
     position: fixed;
     top: 0;
     left: 0;
@@ -39,36 +44,21 @@ header{
     z-index: 99;
     opacity: 0;
     animation: to_bottom 1s ease forwards;
+    transition: top 0.3s; 
 }
 
-header h1.logo {
-    margin: 0; 
-    padding: 0; 
-}
-header h1.logo img {
-    max-height: 70px; 
+header.hidden {
+    top: -100px; 
 }
 
-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: var(--background-color); /* Adjust based on your design */
-    z-index: 1000;
-}
-
-header.hide-logo h1.logo img {
-    display: none;
-}
-
-
-header nav a{
+header nav a {
     color: var(--text-light-color);
     margin-left: 70px;
     font-size: 26px;
     position: relative;
 }
-header nav a::before{
+
+header nav a::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -81,35 +71,42 @@ header nav a::before{
     transform-origin: center;
     transform: scaleX(0);
 }
+
 header nav .active::before,
-header nav a:hover::before{
+header nav a:hover::before {
     transform: scaleX(1);
 }
-.text-box{
+
+.text-box {
     width: 50%;
 }
-.text-box h1{
+
+.text-box h1 {
     font-size: 85px;
     color: var(--primary-color);
     animation: to_right 1s ease forwards .8s;
 }
-.text-box h1:nth-child(2){
+
+.text-box h1:nth-child(2) {
     font-size: 50px;
     color: var(--text-light-color);
     animation-delay: .9s;
 }
-.text-box p{
+
+.text-box p {
     margin: 40px 0;
     font-size: 22px;
     width: 77%;
     color: var(--text-dark-color);
     animation: to_right 1s ease forwards 1s;
 }
-.btn-box{
+
+.btn-box {
     display: flex;
     gap: 20px;
 }
-.btn{
+
+.btn {
     position: relative;
     color: var(--text-light-color);
     padding: 12px 30px;
@@ -121,35 +118,40 @@ header nav a:hover::before{
     transition: .3s;
     animation: to_right 1s ease forwards 1.1s;
 }
+
 .btn:hover,
-.btn:nth-child(2){
+.btn:nth-child(2) {
     color: var(--background-color);
     background-color: var(--secondary-color);
     box-shadow: 0 0 15px var(--secondary-color);
 }
-.btn:nth-child(2):hover{
+
+.btn:nth-child(2):hover {
     color: var(--text-light-color);
     background: transparent;
     box-shadow: none;
 }
+
 .img {
     position: absolute;
     right: 10px;
     top: 150px;
     height: 100%;
-    max-width: 50%; 
+    max-width: 50%;
     z-index: 1;
     transform: translateY(100%);
     animation: to_top 1.8s ease forwards 1.1s;
 }
-.background-span{
+
+.background-span {
     position: absolute;
     height: 100%;
     display: flex;
     right: 0;
     z-index: 0;
 }
-.overlay{
+
+.overlay {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -157,49 +159,56 @@ header nav a:hover::before{
     animation: overlay_span 1.5s ease forwards 2.9s;
     transform-origin: right;
 }
-.text-box *{
+
+.text-box * {
     opacity: 0;
 }
-.text-box span{
+
+.text-box span {
     opacity: 1;
 }
+
 /* keyframes */
 @keyframes to_bottom {
-    0%{
+    0% {
         opacity: 0;
         transform: translateY(-50px);
     }
-    100%{
+    100% {
         opacity: 1;
         transform: translateY(0);
     }
 }
+
 @keyframes to_right {
-    0%{
+    0% {
         opacity: 0;
         transform: translateX(-50px);
     }
-    100%{
+    100% {
         opacity: 1;
         transform: translateX(0);
     }
 }
+
 @keyframes to_top {
-    0%{
+    0% {
         transform: translateY(100%);
     }
-    100%{
+    100% {
         transform: translateY(0);
     }
 }
+
 @keyframes overlay_span {
-    0%{
+    0% {
         transform: scaleX(1);
     }
-    100%{
+    100% {
         transform: scaleX(0);
     }
 }
+
 
 /* --------------- CONTENT ----------------- */
 #Content {
@@ -362,4 +371,3 @@ header nav a:hover::before{
         margin-top: 15px;
     }
 }
-
