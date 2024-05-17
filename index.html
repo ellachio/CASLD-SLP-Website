@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CASLD1-SLP2 2024</title>
+    <title>CASLD1 2024</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/3928f97def.js" crossorigin="anonymous"></script>
 
@@ -32,8 +32,8 @@
 
 </head>
 <body>
-    <header>
-        <h1 class="logo"><img src="logo.png" alt="Logo"></h1>
+    <header id="header">
+        <h1 class="logo"></h1>
         <nav>
             <a href="#" class="active" onclick="scrollToTop()">Home</a>
             <a href="#Content">Content</a>
@@ -54,6 +54,8 @@
         </div>
         <img src="earth.png" class="img" alt="">
     </section>
+</body>
+
 
 
 <!-- ----------CONTENT------------ -->
@@ -265,6 +267,25 @@
     
         window.addEventListener('scroll', checkScroll);
         checkScroll(); // Initial check in case the page is not at the top
+    });
+    </script>
+
+<script>
+    let lastScrollTop = 0;
+    const header = document.getElementById('header');
+    
+    window.addEventListener('scroll', function() {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+        if (scrollTop > lastScrollTop) {
+            // Scroll down
+            header.classList.add('hidden');
+        } else {
+            // Scroll up
+            header.classList.remove('hidden');
+        }
+    
+        lastScrollTop = scrollTop;
     });
     </script>
     
